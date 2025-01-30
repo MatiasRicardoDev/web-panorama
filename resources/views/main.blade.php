@@ -145,7 +145,6 @@
                 <input type="text" class="input-field" style="top: 935px; left: 525px;" placeholder="Sábado" name="sabado_17" value="{{$sanLorenzo->sabado_17}}">
                 <input type="text" class="input-field" style="top: 935px; left: 937px;" placeholder="Domingo 17" name="domingo_17" value="{{$sanLorenzo->domingo_17}}">
                 @csrf
-                <button type="submit" class="floating-button" style="position: absolute; top: 10px; right: 10px; z-index: 1000;">Guardar SL</button>
             </form>
     
             
@@ -172,7 +171,6 @@
 
                 <input type="text" class="input-field" style="top: 1265px; left: 525px;" placeholder="Sábado" name="sabado_6" value="{{$arroyo->sabado_6}}">
                 <input type="text" class="input-field" style="top: 1265px; left: 937px;" placeholder="Domingo" name="domingo_6" value="{{$arroyo->domingo_6}}">
-                <button type="submit" class="floating-button" style="position: absolute; top: 40px; right: 10px; z-index: 1000;">Guardar AR</button>
             </form>
 
             <!-- bs as -->
@@ -219,7 +217,7 @@
 
                 <input type="text" class="input-field" style="top: 1860px; left: 525px;" placeholder="Sábado" name="sabado_13" value="{{$buenosAires->sabado_13}}">
                 <input type="text" class="input-field" style="top: 1860px; left: 937px;" placeholder="Domingo 13" name="domingo_13" value="{{$buenosAires->domingo_13}}">
-                <button type="submit" class="floating-button" style="position: absolute; top: 70px; right: 10px; z-index: 1000;">Guardar BA</button>
+                
             </form>
 
             <!-- bahia -->
@@ -246,7 +244,7 @@
 
                 <input type="text" class="input-field" style="top: 2192px; left: 525px;" placeholder="Sábado" name="sabado_6" value="{{$bahiaBlanca->sabado_6}}">
                 <input type="text" class="input-field" style="top: 2192px; left: 937px;" placeholder="Domingo" name="domingo_6" value="{{$bahiaBlanca->domingo_6}}">
-                <button type="submit" class="floating-button" style="position: absolute; top: 100px; right: 10px; z-index: 1000;">Guardar BB</button>
+                
             </form>
 
 
@@ -255,6 +253,39 @@
     </div>
 </div>
 
+<div class="buttons">
+
+    <button class="button" onclick="saveSanLorenzo()">
+        San Lorenzo save
+    </button><button class="button" onclick="saveArroyo()">
+        Arroyo Seco Save
+    </button><button class="button" onclick="saveBsAs()">
+        Bs AS save
+    </button><button class="button" onclick="saveBahia()">
+        Bahia save
+    </button>
+    <button class="button" onclick="exportToImage()">
+        Descargar como Imagen (JPG)
+    </button>
+    <button class="button" onclick="exportToPDF()">
+        Descargar como PDF
+    </button>
+</div>
+
+        <script type="text/javascript">
+            function saveSanLorenzo(){
+                document.getElementById('sl-form').submit();
+            }
+            function saveArroyo(){
+                document.getElementById('arroyo-form').submit();
+            }
+            function saveBsAs(){
+                document.getElementById('bsas-form').submit();
+            }
+            function saveBahia(){
+                document.getElementById('bahia-form').submit();
+            }
+        </script>
 
     
     <div class="buttons">
